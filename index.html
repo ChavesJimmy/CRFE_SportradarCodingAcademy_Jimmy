@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Event Calendar</title>
+</head>
+
+<body>
+    <div id="title">
+    <h1>Event Calendar</h1>
+    <a href="#addEventForm" class="addEventButton">Add Event</a>
+</div>
+    <!-- Calendar -->
+    <div id="calendarMonth">
+        <button id="prevMonth">&#8592; Prev.</button>
+        <h2 id="currentMonth">Month Year</h2>
+        <button id="nextMonth">Next &#8594;</button>
+    </div>
+    <div id="calendar">
+    </div>
+    <div id="calendarKey">
+        <div class="playedKey">Match played</div>
+        <div class="scheduledKey">Match scheduled</div>
+        <div class="detailKey">
+            Click on an event to get more infos
+        </div>
+    </div>
+
+            <!-- Add Event Form -->
+
+    <form id="addEventForm">
+        <h1>Add an event</h1>
+        <div class="teams">
+            <div>
+        <label for="homeTeam">Home Team*:</label>
+        <input type="text" id="homeTeam" name="homeTeam" required>
+        <label for="abbreviationHomeTeam">Abbreviation*:</label>
+        <input type="text" id="abbreviationHomeTeam" name="abbreviationHomeTeam" required>
+    </div><div>
+        <label for="awayTeam">Away Team*:</label>
+        <input type="text" id="awayTeam" name="awayTeam" required>
+        <label for="abbreviationAwayTeam">Abbreviation*:</label>
+        <input type="text" id="abbreviationAwayTeam" name="abbreviationAwayTeam" required>
+    </div>
+        <br>
+        </div>
+        <div class="timeVenue">
+        <label for="dateVenue">Date*:</label>
+        <input type="date" id="dateVenue" name="dateVenue" required>
+        <br>
+
+        <label for="timeVenueUTC">Time*:</label>
+        <input type="time" id="timeVenueUTC" name="timeVenueUTC" required>
+    </div>
+        <br>
+
+        <label for="stadium">Stadium:</label>
+        <input type="text" id="stadium" name="stadium">
+        <br>
+
+        <label for="status">Status*:</label>
+        <select id="status" name="status" required>
+            <option value="scheduled">Scheduled</option>
+            <option value="played">Played</option>
+        </select>
+        <br>
+
+        <label for="result">Result:</label>
+        <input type="text" id="result" name="result">
+        <br>
+
+        <label for="stage">Stage:</label>
+        <input type="text" id="stage" name="stage">
+        <br>
+
+        <label for="competition">Competition*:</label>
+        <input type="text" id="competition" name="competition" required>
+        <br>
+        <p>* mandatory fields</p>
+        <br>
+        <button type="submit">Add Event</button>
+    </form>
+
+    <script src="./scripts/calendarScript.js"></script>
+</body>
+
+</html>
